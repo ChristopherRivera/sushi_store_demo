@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChefHat, ShoppingBag, Menu, X, BarChart3, Code2, Globe, Mail } from 'lucide-react';
+import { ChefHat, ShoppingBag, Menu, X, BarChart3, Code2, Globe, Mail, ExternalLink } from 'lucide-react';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 interface MainLayoutProps {
@@ -90,14 +90,17 @@ export function MainLayout({ children }: MainLayoutProps) {
           </div>
           
           <div className="flex justify-center gap-2 mt-1">
-            <a href="https://github.com/ChristopherRivera" target="_blank" rel="noreferrer" className="p-1.5 rounded-lg bg-white dark:bg-white/5 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-500/20 transition-all shadow-sm border border-slate-200 dark:border-white/5">
+            <a href="https://github.com/ChristopherRivera" target="_blank" rel="noreferrer" title="GitHub" className="p-1.5 rounded-lg bg-white dark:bg-white/5 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-500/20 transition-all shadow-sm border border-slate-200 dark:border-white/5">
               <Code2 size={16} />
             </a>
-            <a href="https://www.servitechnology.cl" target="_blank" rel="noreferrer" className="p-1.5 rounded-lg bg-white dark:bg-white/5 text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-500/20 transition-all shadow-sm border border-slate-200 dark:border-white/5">
+            <a href="https://www.servitechnology.cl" target="_blank" rel="noreferrer" title="Portafolio" className="p-1.5 rounded-lg bg-white dark:bg-white/5 text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-500/20 transition-all shadow-sm border border-slate-200 dark:border-white/5">
               <Globe size={16} />
             </a>
-            <a href="mailto:contacto@servitechnology.cl" className="p-1.5 rounded-lg bg-white dark:bg-white/5 text-slate-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-500/20 transition-all shadow-sm border border-slate-200 dark:border-white/5">
+            <a href="mailto:contacto@servitechnology.cl" title="Email" className="p-1.5 rounded-lg bg-white dark:bg-white/5 text-slate-500 dark:text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-500/20 transition-all shadow-sm border border-slate-200 dark:border-white/5">
               <Mail size={16} />
+            </a>
+            <a href="https://umaisushivina.cl/" target="_blank" rel="noreferrer" title="Ver Sistema Original" className="p-1.5 rounded-lg bg-white dark:bg-white/5 text-slate-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-500/20 transition-all shadow-sm border border-slate-200 dark:border-white/5">
+              <ExternalLink size={16} />
             </a>
           </div>
 
