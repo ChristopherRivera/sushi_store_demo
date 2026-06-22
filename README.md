@@ -43,4 +43,4 @@ Un sistema de Punto de Venta (POS) y Monitor de Cocina (KDS) construido con **Re
 
 ---
 **Desarrollado por [Christopher Rivera](https://github.com/ChristopherRivera)**  
-*Proyecto creado como demostración técnica de capacidades de desarrollo Frontend.*
+*Versión Showcase (Demo) de un sistema de Punto de Venta actualmente en producción.*
