@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+# POS Showcase Frontend 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un sistema de Punto de Venta (POS) y Monitor de Cocina (KDS) construido con **React, TypeScript y Vite**. Diseñado como un proyecto de demostración (Showcase) para portafolios, enfocado en mostrar habilidades avanzadas en desarrollo Frontend, gestión de estado global y maquetación de interfaces modernas.
 
-Currently, two official plugins are available:
+## 🌟 Características Principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **Terminal de Ventas (POS):** Toma de pedidos, catálogo de productos interactivo, gestión de "extras" (add-ons) y cálculo automático de totales incluyendo costos de envío dinámicos.
+* **Monitor de Cocina (KDS Kanban):** Tablero en tiempo real que refleja las órdenes entrantes. Las tarjetas cambian de estado y muestran temporizadores dinámicos para indicar el tiempo de preparación.
+* **Dashboard de Reportes:** Integración con `recharts` para visualizar tendencias de ventas, productos más vendidos, y distribución de canales de pago o despacho.
+* **Gestión de Estado Global Avanzada:** Utilización de **Zustand** con el middleware de persistencia (`localStorage`) para asegurar que la información (órdenes, carrito y métricas) persista sin necesidad de un backend real.
+* **Diseño Premium Moderno:** Interfaz creada con **Tailwind CSS**, aplicando técnicas de *Glassmorphism*, transiciones suaves y soporte completo para temas Oscuro/Claro (Dark & Light mode).
+* **Impresión Térmica Simulada:** Generación de tickets de venta y comandas de cocina listos para enviar al spooler de una impresora térmica de 80mm.
 
-## React Compiler
+## 🛠️ Stack Tecnológico
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Core:** React 18, TypeScript, Vite
+* **Estado:** Zustand
+* **Estilos:** Tailwind CSS, Lucide React (Iconografía)
+* **Gráficos:** Recharts
+* **Ruteo:** React Router DOM
 
-## Expanding the ESLint configuration
+## 🚀 Instalación y Uso
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/ChristopherRivera/sushi_store_demo.git
+   cd pos_showcase_react
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. **Instalar las dependencias:**
+   ```bash
+   npm install
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3. **Ejecutar en entorno de desarrollo:**
+   ```bash
+   npm run dev
+   ```
+   El proyecto estará disponible en `http://localhost:5173`.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🧪 Pruebas (Testing)
+*(Próximamente)* El proyecto incluirá pruebas unitarias y de integración utilizando **Vitest** y **React Testing Library** para asegurar el correcto cálculo del carrito y el renderizado condicional.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+**Desarrollado por [Christopher Rivera](https://github.com/ChristopherRivera)**  
+*Proyecto creado como demostración técnica de capacidades de desarrollo Frontend.*
