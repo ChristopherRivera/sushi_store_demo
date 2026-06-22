@@ -39,7 +39,12 @@ Un sistema de Punto de Venta (POS) y Monitor de Cocina (KDS) construido con **Re
    El proyecto estará disponible en `http://localhost:5173`.
 
 ## 🧪 Pruebas (Testing)
-*(Próximamente)* El proyecto incluirá pruebas unitarias y de integración utilizando **Vitest** y **React Testing Library** para asegurar el correcto cálculo del carrito y el renderizado condicional.
+El proyecto incluye un entorno de pruebas configurado con **Vitest**. Actualmente cuenta con pruebas unitarias para asegurar la lógica de negocio, como el correcto cálculo del carrito y sus extras (addons).
+
+Para ejecutar los tests:
+```bash
+npm run test
+```
 
 ---
 **Desarrollado por [Christopher Rivera](https://github.com/ChristopherRivera)**  
