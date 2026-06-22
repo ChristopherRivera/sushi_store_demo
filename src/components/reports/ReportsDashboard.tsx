@@ -13,10 +13,9 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  ResponsiveContainer,
-  Legend
+  ResponsiveContainer
 } from 'recharts';
-import { TrendingUp, ShoppingBag, DollarSign, Clock, Users } from 'lucide-react';
+import { TrendingUp, ShoppingBag, DollarSign, Clock } from 'lucide-react';
 
 export function ReportsDashboard() {
   const { orders } = usePOSStore();
@@ -220,7 +219,7 @@ export function ReportsDashboard() {
                 <XAxis dataKey="day" stroke="#94a3b8" fontSize={11} tickLine={false} />
                 <YAxis stroke="#94a3b8" fontSize={11} tickLine={false} tickFormatter={(v) => `$${v/1000}k`} />
                 <Tooltip
-                  formatter={(value) => [`$${value.toLocaleString('es-CL')}`, 'Ventas']}
+                  formatter={(value: any) => [`$${Number(value || 0).toLocaleString('es-CL')}`, 'Ventas']}
                   contentStyle={{ backgroundColor: '#0c0c14', borderColor: 'rgba(255,255,255,0.05)', borderRadius: '12px', fontSize: '11px', color: '#fff' }}
                 />
                 <Area type="monotone" dataKey="Ventas" stroke="#6366f1" strokeWidth={2} fillOpacity={1} fill="url(#colorSales)" />
@@ -281,7 +280,7 @@ export function ReportsDashboard() {
                   contentStyle={{ backgroundColor: '#0c0c14', borderColor: 'rgba(255,255,255,0.05)', borderRadius: '12px', fontSize: '11px', color: '#fff' }}
                 />
                 <Bar dataKey="Cantidad" fill="#6366f1" radius={[0, 8, 8, 0]} maxBarSize={30}>
-                  {topProductsData.map((entry, index) => (
+                  {topProductsData.map((_entry, index) => (
                     <Cell key={`cell-${index}`} fill={index === 0 ? '#6366f1' : index === 1 ? '#4f46e5' : index === 2 ? '#4338ca' : '#3730a3'} />
                   ))}
                 </Bar>
